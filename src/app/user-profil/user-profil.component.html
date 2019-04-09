@@ -1,0 +1,20 @@
+<p>
+  user-profil works!
+</p>
+
+
+  <img [src]="Person.photo" [alt]="Person.name">
+
+  <h1>Name: {{Person.name}}</h1>
+  <p class="profil">
+    First Name : {{Person.firstName}}</p>
+    <p *ngIf="age">Age: {{Person.age}}</p>
+
+    <form>
+      <input name="citations" type="text" [(ngModel)]="Person.Quote">
+      <p>Quote: {{Person.Quote}}</p>
+    </form>
+
+
+
+    <button (click)="displayAge()">Click to see age</button>
