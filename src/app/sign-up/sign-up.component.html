@@ -2,4 +2,25 @@
   sign-up works!
 </p>
 
-<input type="text">
+
+
+
+<form (ngSubmit)="onSubmit()" #myForm="ngForm">
+  <div>
+    <label for=""></label>
+    <input #title="ngModel"  name="title" [(ngModel)]="model.title" type="text" maxlength="25" minlength="4">
+  </div>
+  <div>
+    <label for=""></label>
+    <input name="email" #email="ngModel" [(ngModel)]="model.email" type="email" required email>
+
+  </div>
+
+    <div *ngIf="myForm.submitted">
+      <div *ngIf="title.errors?.minlength">le champ est supérieur à 4 caracteres</div>
+      <div *ngIf="email.errors">le champ email est requis !!!</div>
+
+    </div>
+
+    <button type="submit">Submit</button>
+</form>

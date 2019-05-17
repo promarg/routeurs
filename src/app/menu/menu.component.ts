@@ -22,4 +22,4 @@ const ROUTES: Routes=[
   {path:'', component: UserProfilComponent}
 ]
 
-export{ROUTES};
+export {ROUTES};
